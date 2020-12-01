@@ -1,0 +1,30 @@
+.dropdown{
+    &:hover{
+        .dropdown-menu{
+            display: block;
+            padding-right: $spacing*5;
+            @include responds-to("large"){
+                background: rgba(16, 16, 16, 0.85);
+                padding-right: 0;
+            }
+        }
+    }
+    .dropdown-item{
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            color: $cOrange !important;
+        }
+        @include responds-to("large"){
+            color: $cPrimary !important;
+            text-align: center;
+        }  
+    }
+    @include responds-to("small"){
+        &:hover{
+            .dropdown-toggle{
+                background-color: $primary;
+                color: $cSecondary !important;
+            } 
+        }
+    }
+}

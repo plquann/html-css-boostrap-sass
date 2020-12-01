@@ -1,0 +1,22 @@
+.ads {
+  background: $darkGreen;
+  padding: $spacing*5 0;
+  .ads-info{
+    .title{
+        @include Text($cPrimary, $h2, $bold, $spacing-text-1);
+    }
+    p{
+        @include Text($cGreyBlue,$body1, $regular, $spacing-text-1);
+        line-height: $line-spacing-l;
+    }
+  }
+  @include responds-to('small'){
+    .ads-info, .ads-img{
+      max-width: 90%;
+      margin: $spacing*2 auto;
+      .title{
+        @include Text($cPrimary, $h4, $bold, $spacing-text-1);
+      }
+    }
+  }
+}

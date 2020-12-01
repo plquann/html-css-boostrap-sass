@@ -1,0 +1,27 @@
+.modal{
+    .modal-dialog{
+        max-width: 600px;
+        margin: $spacing*3 auto;
+        .modal-header{
+            h4{
+                @include Text($cBlue, $h4, $bold, $spacing-text-1, center);
+                width: 100%;
+            }
+            .close{
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .modal-body{
+            h5{
+                @include Text($cSecondary, $h5, $bold, $spacing-text-1, center);
+                margin-top: $spacing*2;
+            }
+            p{
+                @include Text($cGrey, $subtitle2, $regular, $spacing-text-1, center);
+                line-height: $line-spacing-l;
+                margin: $spacing*1.5 0 $spacing;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.footer{
+    background: $black;
+    padding: $spacing 0;
+    .footer-content{
+        h3{
+            @include Text($cPrimary, $h4, $medium, $spacing-text-1, left);
+            padding-bottom: $spacing*5;
+        }
+        .footer-left{
+            p{
+                @include Text($cDarkGrey, $subtitle3, $regular, $spacing-text-1, left);
+                margin: $spacing*2 0;
+            }
+            i{
+                margin-right: $spacing*2;
+            }
+            a{
+                text-decoration: none;
+                color: $cDarkGrey;
+                transition: all 0.5s;
+                &:hover{
+                    color: $cPrimary;
+                }
+            }
+        }
+        .footer-between{
+            p{
+                @include Text($cDarkGrey, $subtitle3, $regular, $spacing-text-1, left);
+                margin-bottom: $spacing*3;
+            }
+        }
+        .footer-right{
+            &>p{
+                @include Text($cDarkGrey, $subtitle3, $regular, $spacing-text-1, left);
+                margin-bottom: $spacing*0.8;
+                transition: all 0.5s;
+                &:hover{
+                    color: $cBlue;
+                }
+                i{
+                    @include Icons($cBlue, $body1);
+                    margin-right: $spacing*1.5;
+                }
+                span{
+                    cursor: pointer;
+                }
+            }
+        }
+        .footer-bottom{
+            margin: $spacing*3 0;
+        }
+        
+    }
+    @include responds-to("large"){
+        p{
+            font-size: 14px !important;
+        }
+    }
+    @include responds-to("medium"){
+        .container{
+            max-width: 90%;
+            margin: 0 auto;
+            .footer-left{
+                i{
+                    margin-right: $spacing*0.5;
+                }  
+            }
+        }
+    }
+    @include responds-to("small"){
+        .footer-content{
+            h3{
+                padding-bottom: $spacing*2;
+            }
+        }
+    }
+}

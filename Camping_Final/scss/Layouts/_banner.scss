@@ -1,0 +1,69 @@
+.banner{
+    width: 100%;
+    height: 700px;
+    background: url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+    .banner-row{
+        width: 50%;
+        .banner-col{
+            span{
+                @include Text($cOrange, $subtitle1, $light, $spacing-text-1);
+            }
+            h1{
+                @include Text($cPrimary, $h1, $bold, $spacing-text-1);
+            }
+            p{
+                @include Text($cDarkLight, $body1, $light, $spacing-text-1);
+                line-height: $line-spacing;
+            }
+            a{
+                color: $cPrimary;
+                text-decoration: none;
+            }
+        }
+    }
+    @include responds-to('large'){
+        height: 500px;
+        .banner-row{
+            width: 100%;
+            margin: 0 auto;
+            .banner-col{
+                span{
+                    @include Text($cOrange, $body1, $light, $spacing-text-1);
+                }
+                h1{
+                    @include Text($cPrimary, $h2, $bold, $spacing-text-1);
+                }
+                p{
+                    @include Text($cDarkLight, $body3, $light, $spacing-text-1);
+                    line-height: $line-spacing;
+                }
+                a{
+                    color: $cPrimary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    @include responds-to('small'){
+        height: 450px;
+        .banner-row{
+            .banner-col{
+                span{
+                    @include Text($cOrange, $subtitle2, $light, $spacing-text-1);
+                }
+                h1{
+                    @include Text($cPrimary, $h6, $bold, $spacing-text-1);
+                }
+                p{
+                    @include Text($cDarkLight, $body3, $light, $spacing-text-1);
+                    line-height: $line-spacing;
+                }
+                a{
+                    color: $cPrimary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

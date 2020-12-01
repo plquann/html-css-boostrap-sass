@@ -1,0 +1,50 @@
+.feedback{
+    .title{
+        @include Text($cSecondary, $h2, $bold, $spacing-text-1);
+    }
+    .feedback-content{
+        max-width: 60%;
+        margin: 0 auto;
+        p{
+            @include Text($cSecondary,$subtitle3, $light, 0);
+            line-height: $line-spacing-l;
+        }
+        i{
+            @include Icon($cOrange, $h2);
+            margin-right: $spacing;
+        }
+        .feedback-img{
+            img{    
+                border-radius: 50%;
+            }
+            
+        }
+        .feedback-user{
+            p{
+                @include Text($cRedOrange, $subtitle3, $semiBold, $spacing-text-1);
+                margin-bottom: 0;
+            }
+            span{
+                @include Text($cAluminium, $body2, $light, $spacing-text-1);
+            }
+        }
+    }
+    @include responds-to('large'){
+        .title{
+            @include Text($cSecondary, $h3, $bold, $spacing-text-1);
+        }
+        .feedback-content{
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+    @include responds-to('medium'){
+        .title{
+            @include Text($cSecondary, $h4, $bold, $spacing-text-1);
+        }
+        .feedback-content{
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

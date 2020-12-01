@@ -1,0 +1,53 @@
+.carousel{
+    .carousel-inner{
+        .carousel-item-1{
+            @extend .Background-cover;
+            background: url(../../image/banner.jpg);
+        }
+        .carousel-item-2{
+            @extend .Background-cover;
+            background: url(../../image/banner-1.jpg);
+        }
+        .carousel-item-3{
+            @extend .Background-cover;
+            background: url(../../image/banner-2.jpg);
+        }
+        .carousel-control-prev, .carousel-control-next{
+            i{
+                @include Icons($cGrey, $h3);
+                // visibility: hidden;
+            }
+        }
+    }
+    .carousel-indicators{
+        justify-content: center;
+        margin-bottom: $spacing*10;
+        li{
+            @extend .Indicators-icon;
+        }
+        .active{
+            background: $primary;
+            border: 1px solid $primary;
+        }
+    }
+    @include responds-to("large"){
+        .carousel-inner{
+            .carousel-item{
+                height: 450px;
+            }
+        }
+        .carousel-indicators{
+            margin-bottom: $spacing*8;
+        }
+    }
+    @include responds-to("large"){
+        .carousel-inner{
+            .carousel-item{
+                height: 430px;
+            }
+        }
+        .carousel-indicators{
+            margin-bottom: $spacing*4;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.team{
+    padding:$spacing*3 0;
+    .team-title{
+        border: 1px solid transparent;
+        h1{
+            @include Text($cBlackGrey, $h1, $bold, $spacing-text-2, center);
+        }
+        span{
+            @extend .Paragraph-title;
+        }   
+    }
+    .team-list{
+        margin-top: $spacing*8;
+        padding-bottom: $spacing*5;
+        .team-item{
+            padding: 0 $spacing*3;
+            img{
+                display: block;
+                border-radius: 50%;
+                width: 60%;
+                margin: 0 auto;
+            }
+            h4{
+                @include Text($cSecondary, $h5, $bold, $spacing-text-1, center);
+                margin:$spacing*4 0 $spacing*2;
+            }
+            p{
+                @include Text($cDarkBlue, $subtitle2, $regular, $spacing-text-2, center);
+                margin-bottom: $spacing*2;
+            }
+            .team-social{
+                padding: $spacing*2 0;
+                position: relative;
+                a{
+                   @include Icons($cBlue, $subtitle1); 
+                   display: inline-block;
+                   padding: 0 $spacing*0.8;
+                   transition: all 0.5s ease-in;
+                   &:hover{
+                       color: $cSecondary;
+                   }
+                }
+                &::before{
+                    content: "";
+                    background: $blackLight;
+                    @include Position-absolute(100%, 1.5px, 0 , 0);
+                    transition: all 0.5s ease-in;  
+                }
+            }
+            &:hover{
+                .team-social::before{
+                    background: $secondary;
+                }
+            }
+        }
+
+    }
+    @include responds-to("large"){
+        .team-list{
+            .team-item{
+                padding: 0 $spacing;
+            }
+        }
+    }
+    @include responds-to("medium"){
+        .container{
+            max-width: 90%;
+            margin: 0 auto;
+            .team-list{
+                .team-item{
+                    padding: 0 $spacing;
+                    h4{
+                        font-size: $subtitle1;
+                    }
+                    p{
+                        font-size: $subtitle3;
+                    }
+                }
+                .team-social{
+                    a{
+                        font-size: $subtitle2;
+                    }
+                }
+            }
+        }
+        
+    }
+    @include responds-to("small"){
+        .team-title{
+            h1{
+                font-size: $h2;
+            }
+        }
+        .team-list{
+            .team-item{
+                padding: 0 $spacing*2.5;
+            }
+        }
+    }
+}

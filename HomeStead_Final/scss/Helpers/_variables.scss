@@ -1,0 +1,71 @@
+// Create theme
+
+// Background-Color
+$primary: #ffffff;
+$secondary: #b06010;
+$blumine: #204b87;
+$blue: #3b5998;
+$blueLight: #1da1f2;
+$rose: #ea4c89;
+$blackLight: #252323;
+$greyRgba: rgba(255, 255, 255, 0.18);
+$blackRgb: rgb(27, 27, 27);
+$orange: #ff9800;
+$darkGrey: #212121;
+$blackDark: #111111;
+$black: #000000;
+$blackBlue: #161617;
+// Text-Color
+$cPrimary: #ffffff;
+$cSecondary: #b06010;
+$cBlue: #204b87;
+$cBlackGrey: #262c38;
+$cBlackDark: #212121;
+$cDarkBlue: #4f5667;
+$cGrey: #888888;
+$cDarkGrey: #999999;
+$cLightGrey: #cecece;
+// Font-size
+$h1: 45px;
+$h2: 35px;
+$h3: 28px;
+$h4: 25px;
+$h5: 23px;
+$h6: 20px;
+$subtitle1: 18px;
+$subtitle2: 16px;
+$subtitle3: 15px;
+$body1: 14px;
+$body2: 13px;
+$body3: 12px;
+
+// Font-weight
+$bolder: 900;
+$bold: 700;
+$semiBold: 600;
+$medium: 500;
+$regular: 400;
+$light: 300;
+
+//Spacing
+$spacing: 10px;
+
+$spacing-text-1: 1px;
+$spacing-text-2: 2px;
+$spacing-text-5: 5px;
+
+// Width, Height
+$width: 10px;
+$height: 10px;
+
+// Line Height
+$line-spacing: 1.6;
+$line-spacing-l: 1.8;
+
+//Responsive
+$breakpoints:(
+    'extra-large':1199.98px,
+    'large':991.98px,
+    'medium':767.98px,
+    'small':575.98px,
+)

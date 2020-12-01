@@ -1,0 +1,56 @@
+.slider{
+    position: relative;
+    .slider-info{
+        @include  Position-absolute(100%, 100%, 0, 0);
+        .slider-content{
+            h1{
+                @include Text($primary, $h1, $light,0, center);
+                line-height: 1.6;
+                padding: 0 $spacing*7;
+            }
+            .social-list{
+                margin-top: $spacing*5;
+                a{
+                    @include Text($cSecondary, $subtitle3, $light, $spacing-text-1, center);
+                    margin: 0 $spacing*2;
+                }
+            }
+        }
+    }
+    @include responds-to("large"){
+        .slider-info{
+            .slider-content{
+                h1{
+                    @include Text($primary, $h2, $light,0, center);
+                    line-height: 1.6;
+                    padding: 0 $spacing*5;
+                }
+                .social-list{
+                    margin-top: $spacing*5;
+                    a{
+                        @include Text($cSecondary, $subtitle3, $light, $spacing-text-1, center);
+                        margin: 0 $spacing*2;
+                    }
+                }
+            }
+        }
+    }
+    @include responds-to("medium"){
+        .slider-info{
+            .slider-content{
+                h1{
+                    @include Text($primary, $h3, $light,0, center);
+                    line-height: 1.6;
+                    padding: 0 $spacing;
+                }
+                .social-list{
+                    margin-top: $spacing*5;
+                    a{
+                        @include Text($cSecondary, $subtitle3, $light, $spacing-text-1, center);
+                        margin: 0 $spacing*2;
+                    }
+                }
+            }
+        }
+    }
+}

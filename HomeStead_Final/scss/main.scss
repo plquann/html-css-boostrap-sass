@@ -1,0 +1,24 @@
+@import "./Helpers/variables";
+@import "./Helpers/mixin";
+@import "./Helpers/extend";
+
+@import "./Vendor/owlCarousel";
+
+@import "./Base/reset";
+
+@import "./Components/myCarousel";
+@import "./Components/socialIcons";
+@import "./Components/myModal";
+@import "./Components/formEmail";
+@import "./Components/toTop";
+@import "./Components/dropdownMenu";
+
+@import "./Layouts/header";
+@import "./Layouts/slider";
+@import "./Layouts/about";
+@import "./Layouts/team";
+@import "./Layouts/feedback";
+@import "./Layouts/statistics";
+@import "./Layouts/footer";
+@import "./Layouts/copyright";
+

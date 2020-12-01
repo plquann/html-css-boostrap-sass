@@ -1,0 +1,56 @@
+.header{
+    width: 100%;
+    box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.05);
+    background: url(../images/banner.jpg) no-repeat center top;
+    background-attachment: fixed;
+    .navbar-brand{
+        font-size: $h2;
+    }
+    .navbar-collapse{
+        .navbar-nav{
+            @include Text($cPrimary, $subtitle2, $regular, $spacing-text-1);
+            .navbar-item{
+                &:hover{
+                    &>{
+                        a{
+                            color: $cOrange !important;
+                        }
+                    }
+                }
+            }
+            .active{
+                a{
+                    color: $cOrange !important;
+                }
+            }
+        }
+    }
+
+    @include responds-to("medium"){
+        .navbar-toggler{
+            display: block;
+            padding: $spacing*1.3 $spacing*2.3;
+            font-size: $subtitle3;
+            border: none;
+            outline: none;
+            border-radius: 0;
+            background-color: #212529;
+            color: $cPrimary;
+            cursor: pointer !important;
+            
+        }
+        .navbar-collapse{
+            background: rgba(16, 16, 16, 0.85);
+            text-align: center;
+        }
+        
+    }
+    @include responds-to("small"){
+        .navbar-brand{
+            font-size: $h4;
+        }
+        .navbar-toggler{
+            padding: $spacing $spacing*2;
+        }   
+    }
+}

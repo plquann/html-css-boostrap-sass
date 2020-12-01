@@ -1,0 +1,42 @@
+.copyright{
+    background: $blackRgba;
+    margin-bottom: $spacing*5; 
+    p{
+        @include Text($cGreyNobel, $subtitle3, $regular, $spacing-text-1);
+        margin: $spacing*0.5 0;
+    }
+    .social{
+        text-align: right;
+        a{
+            padding: $spacing 0;
+            display: inline-block;
+            width: $width*3;
+            height: $height*3;
+            text-align: center;
+            text-decoration: none;
+            &:first-child{
+                color: $cBlueMariner;
+            }
+            &:nth-child(2){
+                color: $cBlueLight;
+            }
+            &:nth-child(3){
+                color: $cRedLight;
+            }
+            &:last-child{
+                color: $cDarkPink;
+            }
+        }
+    }
+    
+    @include responds-to('medium'){
+        p{
+            @include Text($cGreyNobel, $body2, $light, $spacing-text-1);
+            text-align: center;
+        }
+        .social{
+            text-align: center;
+        }
+        
+    }
+}

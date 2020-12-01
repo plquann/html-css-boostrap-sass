@@ -1,0 +1,93 @@
+.statistics{
+    padding: $spacing*6 0;
+    .statistics-title{
+        h1{
+            @include Text($cBlackGrey, $h1, $bold, $spacing-text-2, center);
+            padding-top: $spacing*2;
+        }
+        p{
+            @extend .Paragraph-title;
+        }
+    }
+    .statistics-list{
+        background: $darkGrey;
+        margin-top: $spacing*4;
+        padding: $spacing*5 0;
+        .statistics-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .item-icon{
+                text-align: center ;
+                width: 30%;
+                i{
+                    @include Icons($cSecondary, $h1);
+                    display: block;
+                }
+            }
+            .item-info{
+                margin-left: $spacing*4;
+                width: 70%;
+                span{
+                    display: inline-block;
+                    @include Text($cPrimary, $h1, $medium, $spacing-text-1, left);
+                }
+                p{
+                    @include Text($cPrimary, $subtitle3, $medium, $spacing-text-1, left);
+                }
+            }
+        }
+    }
+    @include responds-to("large"){
+        .statistics-list{
+            .statistics-item{
+                .item-icon{
+                    i{
+                        font-size: $h2;
+                     }
+                }
+                .item-info{
+                    margin-left: $spacing*2;
+                     span{
+                         font-size: $h2;
+                     }
+                     p{
+                         font-size: $body1;
+         
+                     }
+                 }
+            }
+        }
+    }
+    @include responds-to("medium"){
+        .container{
+            max-width: 90%;
+            margin: 0 auto;
+            .statistics-list{
+                padding: 0 $spacing*0.5;
+                .statistics-item-3{
+                    margin: $spacing*2 auto 0;
+                }
+            }
+        }
+    }
+    @include responds-to("small"){
+        .statistics-list{
+            .statistics-item{
+                width: 60%; 
+                padding: 0;
+                margin: $spacing*2 auto 0;
+                .item-info{
+                    span{
+                        display: inline-block;
+                        font-size: $h2;
+                    }
+                    p{
+                        font-size: $body1;
+        
+                    }
+                }
+            }
+        }
+    }
+}

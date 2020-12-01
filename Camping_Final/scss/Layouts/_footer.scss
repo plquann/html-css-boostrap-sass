@@ -1,0 +1,53 @@
+.footer{
+    background: $darkGreen;
+    padding: $spacing*4 0;
+    .footer-content{
+        h3{
+            @include Text($cSmokeWhite, $h4, $semiBold, 0);
+            margin-bottom: $spacing*2.5;
+        }
+        p{
+            @include Text($cGreyBlue, $subtitle3, $light, $spacing-text-1);
+            line-height: $line-spacing;
+            margin: $spacing 0;
+            a{
+                margin: 0;
+            }
+        }
+        a{
+            @include Text($cGreyBlue, $subtitle3, $light, $spacing-text-1);
+            display: block;
+            text-decoration: none;
+            margin: $spacing 0;
+            &:hover{
+                color: $cPrimary;
+            }
+        }
+        .active{
+            color: $cPrimary;
+        }
+    }
+    @include responds-to('medium'){
+        .footer-between{
+            margin-top: $spacing*3;
+        }
+        .footer-right{
+            margin-top: $spacing*3;
+        }
+    }
+    @include responds-to('small'){
+        .footer-content{
+            max-width: 100%;
+            margin: 0 auto;
+            h3{
+                @include Text($cSmokeWhite, $h5, $semiBold, 0);
+            }
+            p{
+                @include Text($cGreyBlue, $body1, $light, $spacing-text-1);
+            }
+            a{
+                @include Text($cGreyBlue, $body1, $light, $spacing-text-1);
+            }
+        }
+    }
+}

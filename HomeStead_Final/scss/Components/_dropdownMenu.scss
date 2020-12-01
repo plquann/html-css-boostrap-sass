@@ -1,0 +1,21 @@
+.dropdown-menu{
+    padding: 0;
+    border-radius: none;
+    .dropdown-item{
+        @include Text($cBlackDark, $body2, $bold, $spacing-text-1, center);
+        padding: $spacing;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            color: $cPrimary;
+            background: $blumine;
+        }
+    }
+    @include responds-to("medium"){
+        width: 30%;
+        margin: 0 auto;
+        .dropdown-item{
+            @include Text(#777, $body2, $bold, $spacing-text-1, center);
+        }
+        
+    } 
+}

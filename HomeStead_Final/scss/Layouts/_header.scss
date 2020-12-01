@@ -1,0 +1,155 @@
+.header{
+    .header-top{
+        background: $secondary;
+        padding: $spacing*0.5 0;
+        span{
+            @include Text($cPrimary, $body1, $light, $spacing-text-1, left);
+            a{
+                color: $cPrimary;
+                text-decoration: none;
+                transition: all 0.5s;
+                &:hover{
+                    color: $cBlue;
+                }
+            }
+            margin-right: $spacing*1.5;
+        }
+    }
+    .header-bottom{
+        .navbar{
+            .navbar-brand{
+                h1{
+                    @include Text($cBlackDark, $h3, $bold, $spacing-text-1,left);
+                    i{
+                        @include Icons($cBlue, $h4);
+                    }
+                    margin-bottom: 0;
+                }
+                span{
+                    @include Text($cSecondary, $body2, $bold, $spacing-text-5, center);
+                    display: block;
+                }
+            }
+            .navbar-toggler{
+                border: none;
+                @include Icons($cBlackDark, $h4);
+            }
+            .navbar-collapse{
+                .navbar-nav{
+                    margin-left: 100px;
+                    margin-right: 100px;
+                    .nav-item{
+                        margin: 0 $spacing;
+                        .nav-link{
+                            @include Text($cBlackDark,$subtitle3, $medium, $spacing-text-1, left);
+                            &:hover{
+                                color: $cSecondary;
+                            }
+                        }
+                        .active{
+                            color: $cSecondary;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @include responds-to("extra-large"){
+        .header-bottom{
+            .navbar{
+                .navbar-collapse{
+                    .navbar-nav{
+                        margin-left: 30px;
+                        margin-right: 30px;
+                        .nav-item{
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }       
+    }
+    @include responds-to("large"){
+        .container{
+            max-width: 800px;
+        }
+        .header-bottom{
+            .navbar{
+                .navbar-brand{
+                    h1{
+                        @include Text($cBlackDark, $h5, $bold, $spacing-text-1,left);
+                        i{
+                            @include Icons($cBlue, $h5);
+                        }
+                        margin-bottom: 0;
+                    }
+                    span{
+                        @include Text($cSecondary, $body3, $bold, $spacing-text-5, center);
+                        display: block;
+                    }
+                }
+                .navbar-collapse{
+                    .navbar-nav{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        .nav-item{
+                            margin: 0 3px;
+                            .nav-link{
+                                @include Text($cBlackDark,$body3, $medium, $spacing-text-1, left);
+                                &:hover{
+                                    color: $cSecondary;
+                                }
+                                padding-right: 5px;
+                            }
+                            .active{
+                                color: $cSecondary;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    @include responds-to("medium"){
+        .header-bottom{
+            padding: 10px 0;
+            .navbar{
+                position: relative;
+                .navbar-collapse{
+                    position: absolute;
+                    width: 100%;
+                    top:50px;
+                    left: 0;
+                    z-index: 10;
+                    background-color: $blackBlue;
+                    .navbar-nav{
+                        .nav-item{
+                            .nav-link{
+                                @include Text($cPrimary,$subtitle3, $medium, $spacing-text-1, left);
+                                text-align: center;
+                            }
+                            .active{
+                                color: $cSecondary;
+                            }
+                        }
+                    }
+                    .social-icons{
+                        justify-content: center;
+                    }
+                }
+            }
+            
+        }
+    }
+    @include responds-to("small"){
+        .header-top{
+            span{
+                @include Text($cPrimary, $body1, $regular, 0, left);
+                i{
+                    margin-right:0px !important;
+                }
+               
+            }
+        }
+    }
+}

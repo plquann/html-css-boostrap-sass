@@ -1,0 +1,21 @@
+@mixin Text($color, $fz, $fw, $ls) {
+    color: $color;
+    font-size: $fz;
+    font-weight: $fw;
+    letter-spacing: $ls;
+}
+@mixin Icon($color, $fz) {
+    color: $color;
+    font-size: $fz;
+}
+@mixin responds-to($breakpoint) {
+    @if map-has-key($map: $breakpoints, $key: $breakpoint){
+      $value : map-get($map: $breakpoints, $key: $breakpoint);
+      @media screen and (max-width:$value){
+        @content;
+      }
+    } 
+    @else{
+      @warn "breakpoint isn't in breakpoint";
+    }
+}

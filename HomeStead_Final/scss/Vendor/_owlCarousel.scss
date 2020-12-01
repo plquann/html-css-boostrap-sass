@@ -1,0 +1,31 @@
+.owl-theme{
+    .owl-controls{
+        .owl-page{
+            margin-top: $spacing*5;
+            &.active{
+                span{
+                    background: $orange;
+                }
+            }
+            span{
+                background: $orange;
+                display: block;
+                width: $width*1.2;
+                height: $height*1.2;
+                margin-right: $spacing;
+            }
+            @include responds-to("small"){
+                    margin-top: $spacing;
+            }
+        }
+        &.clickable{
+            .owl-page{
+                &:hover{
+                    span{
+                        background: $orange;
+                    }
+                }
+            }
+        }
+    }
+}

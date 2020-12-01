@@ -1,0 +1,12 @@
+.statistic {
+    background-color: $secondary;
+    color: $cPrimary;
+    .row{
+        i{
+            @include Icon($cOrange, $h3);
+        }
+        p{
+            @include Text( $cPrimary, $h1, $semiBold, $spacing-text-1);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.feedback{
+    background: url(../../image/banner-2.jpg);
+    height: 550px;
+    @extend .Background-cover;
+    padding: $spacing*5 0;
+    .feedback-title{
+        h1{
+            @include Text($cPrimary, $h1, $bold, $spacing-text-2, center);
+            margin-top: $spacing*2;
+        }
+        p{
+            @extend .Paragraph-title;
+        }
+    }
+    .feedback-carousel{
+        margin: $spacing*5 0;
+        .item{
+            margin: 0 $spacing*2;
+            .feedback-content{
+                padding: $spacing*2;
+                background: $greyRgba;
+                position: relative;
+                p{
+                    @include Text($cPrimary, $body1, $regular, $spacing-text-1, left);
+                    line-height: $line-spacing;
+                    margin-bottom: 0;
+                }
+                &::after{
+                    content: "";
+                    @include Position-absolute(0, 0, 30%, 100%);
+                    border-top: 10px solid rgba(255, 255, 255, 0.18);
+                    border-right: 10px solid transparent;
+                    border-left: 10px solid transparent;
+                }
+            }
+            .feedback-user{
+                width: 70%;
+                margin: $spacing*3 auto 0;
+                display: flex;
+                .user-img{
+                    width: 30%;
+                }
+                .user-info{
+                    width: 70%;
+                    padding-left: $spacing;
+                    p{
+                        @include Text($cPrimary, $subtitle2, $medium, $spacing-text-1, left);
+                        margin-bottom: 0;
+                    }
+                    span{
+                        @include Text($cLightGrey, $body1, $regular, $spacing-text-1, left);
+                    }
+                }
+            }
+        }
+    }
+    @include responds-to("large"){
+        .feedback-title{
+            h1{
+                font-size: $h2;
+            }
+        }
+        .feedback-carousel{
+            .item{
+                .feedback-content{
+                    p{
+                        font-size: $body2;
+                    }
+                }
+                .feedback-user{
+                    .user-info{
+                        p{
+                            font-size: $subtitle3;
+                        }
+                        span{
+                            font-size: $body2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responds-to("small"){
+        .feedback-title{
+            h1{
+                font-size: $h2;
+            }
+        }
+    }
+}

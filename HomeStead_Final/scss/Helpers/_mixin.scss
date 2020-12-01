@@ -1,0 +1,39 @@
+@mixin Text($color, $fs, $fw, $ls, $ta) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+  text-align: $ta;
+}
+@mixin Icons($color, $fs) {
+  color: $color;
+  font-size: $fs;
+}
+@mixin Position-absolute($w, $h, $left, $top) {
+  position: absolute;
+  width: $w;
+  height:$h;
+  top: $top;
+  left: $left;
+}
+@mixin Input($color, $fz, $pd, $bg, $w, $ls) {
+  outline: none;
+  border: none;
+  color: $color;
+  font-size: $fz;
+  padding:  $pd;
+  background:$bg;
+  width: $w;
+  letter-spacing: $ls;
+}
+
+@mixin responds-to($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint){
+    $value : map-get($map: $breakpoints, $key: $breakpoint);
+    @media screen and (max-width:$value){
+      @content;
+    }
+  } @else{
+    @warn "`{$breakpoint}` isn't in breakpoint";
+  }
+}

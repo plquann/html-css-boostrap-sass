@@ -1,0 +1,26 @@
+form{
+    input[type="email"]{
+        @include Input( $cPrimary, $subtitle2, $spacing*1.2, $blackRgb, 70%, $spacing-text-1);
+        margin-right: $spacing*1.5;
+
+        &::placeholder{
+            color: $cPrimary;
+        }
+    }
+    input[type="submit"]{
+        @include Input( $cPrimary, $subtitle2, $spacing*1.2, $blumine, 20%, $spacing-text-1);
+        transition: all 0.5s ease-out; 
+        &:hover{
+            background: $secondary;
+        }
+    }
+    @include responds-to("small"){
+        input[type="email"]{
+           width: 60%;
+           margin-right: $spacing*0.5;
+        }
+        input[type="submit"]{
+            width: 30%;
+        }
+    }
+} 

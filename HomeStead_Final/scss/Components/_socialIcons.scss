@@ -1,0 +1,31 @@
+.social{
+    margin: $spacing 0 0 0;
+    .social-icons{
+        list-style-type:none;
+        li{
+            a{
+                text-decoration: none;
+                color: $cPrimary;
+            }
+            @extend .Social-item;
+            &:first-child{
+                background: $blue;
+            }
+            &:nth-child(2){
+                background: $blueLight;
+            }
+            &:last-child{
+                background: $rose;
+            }
+            &:hover{
+                border: 2px solid $secondary;
+                color: $cSecondary;
+                background: $primary;
+                a{
+                    color: $cSecondary;
+                }
+            }
+            transition: all 0.5s;
+        }  
+    }
+}

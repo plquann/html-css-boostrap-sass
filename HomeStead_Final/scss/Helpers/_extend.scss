@@ -1,0 +1,32 @@
+.Social-item {
+  display: inline-block;
+  width: $spacing*3;
+  height: $spacing*3;
+  line-height: $spacing*3;
+  text-align: center;
+  border-radius: 50%;
+  color: $cPrimary;
+  font-size: $body3;
+  margin-right: $spacing*0.7;
+  border: 2px solid transparent;
+}
+.Background-cover{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 650px;
+}
+.Indicators-icon{
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  border: 1px solid $secondary;
+  background: $secondary;
+}
+.Paragraph-title{
+  color: $cSecondary;
+  font-size: $subtitle2;
+  font-weight: $regular;
+  line-height: $line-spacing;
+  letter-spacing: $spacing-text-5;
+}

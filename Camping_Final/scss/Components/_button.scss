@@ -1,0 +1,13 @@
+.btnReadMore{
+    background: $orange;
+    border-radius: $border-5;
+    padding: $spacing*1.3 $spacing*3.5;
+    border: none;
+    outline: none;
+    @include Text($cPrimary, $subtitle3, $regular, $spacing-text-1);
+    transition: all 0.5s;
+    &:hover{
+        background: $redOrange;
+        color: $cPrimary;
+    }
+}

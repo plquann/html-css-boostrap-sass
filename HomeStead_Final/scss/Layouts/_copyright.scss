@@ -1,0 +1,18 @@
+.copyright{
+    background:$blackDark;
+    padding: $spacing*1.5 0;
+    margin-bottom: $spacing*5;
+    p{
+        @include Text($cDarkGrey,$subtitle3,$regular,$spacing-text-1, center);
+        margin-bottom: 0;
+        a{
+            color: $cSecondary;
+            text-decoration: underline;
+        }
+    }
+    @include responds-to("small"){
+        p{
+            font-size: $body1;
+        }
+    }
+}

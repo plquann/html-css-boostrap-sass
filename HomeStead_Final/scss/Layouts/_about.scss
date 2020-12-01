@@ -1,0 +1,68 @@
+.about{
+    padding: $spacing*6 0;
+    .about-title{
+        border:1px solid transparent;
+        h1{
+            @include Text($cBlackGrey, $h1, $bold, $spacing-text-1*2, center);
+        }
+        span{
+            @extend .Paragraph-title;
+        }
+        p{
+            @include Text($cGrey, $subtitle3, $regular, $spacing-text-1, center);
+            line-height: 1.8;
+            padding: $spacing $spacing*10;
+        }
+    }
+    .about-list{
+        padding-top: $spacing*5;
+        .about-item{
+            margin-bottom: $spacing*2.5;
+            i{
+                @include Icons($cBlue, $h1);
+                display: inline-block;
+                transition: all 0.5s;
+            }
+            h4{
+                @include Text($cSecondary, $h4, $bold, $spacing-text-1, center);
+                margin: $spacing*2 0;
+            }
+            p{
+                @include Text($cGrey, $subtitle3, $regular, $spacing-text-1, center)
+            }
+            &:hover{
+                i{
+                    transform: rotateY(180deg);
+                    color: $cSecondary;
+                }
+            }
+        }
+    }
+    @include responds-to("medium"){
+        .about-title{
+            p{
+                padding: $spacing $spacing*3;
+            }
+        }
+    }
+    @include responds-to("small"){
+        .about-title{
+            h1{
+                font-size: $h2;
+            }
+            p{
+                padding: $spacing 0;
+            }
+        }
+        .about-item{
+            padding: 0 $spacing*3;
+            i{
+                font-size: $h2;
+            }
+            h4{
+                font-size: $h5;
+            }
+            
+        }
+    }
+}

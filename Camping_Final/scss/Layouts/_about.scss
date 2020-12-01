@@ -1,0 +1,74 @@
+.about{
+    .title{
+        @include Text($cSecondary, $h2, $bold, $spacing-text-1);
+    }
+    .about-content{
+        padding-top: $spacing*3;
+        margin: 0 -$spacing*2;
+        .about-content-item{
+            padding: $spacing $spacing*2;
+            h3{
+                @include Text($cSecondary, $h5, $semiBold, $spacing-text-1);
+                margin: $spacing*3 0;
+            }
+            p{
+                @include Text($cGreyLight, $subtitle2, $light, $spacing-text-1*0.5);
+                padding: 0 $spacing;
+                line-height: $line-spacing-l;
+            }
+            i{
+                @include Icon($cOrange, $h3);
+            }
+        }
+        .about-content-right{
+            padding-left: $spacing*10;
+            padding-top: $spacing*2;
+        }
+    }
+    @include responds-to('medium'){
+        .title{
+            @include Text($cSecondary, $h3, $bold, $spacing-text-1);
+        }
+        .about-content{
+            .about-content-item{
+                h3{
+                    @include Text($cSecondary, $h6, $semiBold, $spacing-text-1);
+                    margin: $spacing*3 0;
+                }
+                p{
+                    @include Text($cGreyLight, $subtitle3, $light, $spacing-text-1*0.5);
+                    padding: 0;
+                    line-height: $line-spacing-l;
+                }
+                i{
+                    @include Icon($cOrange, $h3);
+                }
+            }
+            .about-content-right{
+                padding-left: $spacing*5;
+                padding-top: $spacing*2;
+            }
+        }
+    }
+    @include responds-to('small'){
+        .title{
+            @include Text($cSecondary, $h4, $bold, $spacing-text-1);
+        }
+        .about-content{
+            .about-content-item{
+                h3{
+                    @include Text($cSecondary, $subtitle1, $semiBold, $spacing-text-1);
+                    margin: $spacing*3 0;
+                }
+                p{
+                    @include Text($cGreyLight, $body1, $light, $spacing-text-1*0.5);
+                    padding: 0;
+                    line-height: $line-spacing-l;
+                }
+                i{
+                    @include Icon($cOrange, $h4);
+                }
+            }
+        }
+    }
+}

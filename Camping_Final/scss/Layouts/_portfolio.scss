@@ -1,0 +1,70 @@
+.portfolio{
+    .title{
+        @include Text($cSecondary,$h2, $bold, $spacing-text-1);
+    }
+    .portfolio-item{
+        &:hover{
+            .item-img, .item-detail{
+                box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+                transition: 0.3s all;
+            }
+        }
+        .item-detail{
+            background: $secondary;
+            & > h3{
+                @include Text($cPrimary, $h5, $semiBold, $spacing-text-1);
+                cursor: pointer;
+                margin: $spacing 0;
+            }
+            p{
+                @include Text($cGreyPink, $body1, $regular, $spacing-text-1);
+                margin: $spacing*1.5 0 $spacing*0.5;
+            }
+            .detail-time{
+                padding-bottom: $spacing*1.5 ;
+                border-bottom: 1px solid $cGreyPink; 
+                span{
+                    &:hover{
+                        color:  $cOrange !important;
+                    }
+                    @include Icon($cGreyPink, $body1);
+                    display: inline-block;
+                    width: 40%;
+                    margin: $spacing*0.5 0;
+                }
+                i{
+                    font-size: $body3;
+                }
+            }
+            .detail-footer{
+                margin-top: $spacing*1.5;
+                span{
+                    @include Icon($cGreyPink, $body1);
+                    display: inline-block;
+                    width: 45%;
+                    &:first-child:hover{
+                        color:  $cOrange !important;
+                        cursor: pointer;
+                    }
+                    i{
+                        margin-right: $spacing*0.5;
+                    }
+                }
+            }
+        }
+    }
+    @include responds-to('small'){
+        .title{
+            @include Text($cSecondary,$h3, $bold, $spacing-text-1);
+        }
+        .portfolio-item{
+            max-width: 90%;
+            margin: $spacing*2 auto;
+            .detail-footer{
+                span:last-child{
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
