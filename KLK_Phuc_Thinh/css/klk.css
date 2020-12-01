@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.clear {
+  clear: both;
+}
+.header img {
+  width: 200px;
+}
+.navbar {
+  background-color: #000000;
+  padding: 10px;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-right: 20px;
+  /* 
+    margin: 30px 20px; top-bottom, left-right
+    margin: 10px 20px 30px 40px; top right bottom left
+    */
+}
+.navbar a:hover {
+  color: #ff0000;
+}
+.carousel {
+  background-image: url(../images/slider_1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 563px;
+  background-position: center center;
+}
+
+.product > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.product .list {
+  margin: 0 -5px;
+}
+.product .item {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  box-sizing: border-box;
+  /* border: 1px solid #000000; */
+}
+
+.product .item img {
+  width: 100%;
+}
+.product .item a {
+  background-color: #ff0000;
+  /* No fix width and heigh, text align, margin top-bottom for inline tag */
+  /* display: block; */
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.intro .list .left,
+.intro .list .right {
+  float: left;
+  width: 50%;
+}
+
+.intro .list .item img {
+  width: 100%;
+}
+.intro .list .left .item {
+  float: left;
+  width: 50%;
+}
+
+.intro .list .left .full-width {
+  width: 100%;
+}
+
+.intro .list .item {
+  padding: 5px 5px;
+  box-sizing: border-box;
+}
+
+.intro .list {
+  margin: 0 -5px;
+}
+
+.banner img {
+  width: 100%;
+}
+.banner{
+  position: relative;
+}
+.banner .content {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(102, 24, 24, 0.7);
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  /* border: 1px solid transparent; */
+  padding-top: 70px;
+  box-sizing: border-box;
+  /* position: relative; start from pos current to move */
+  /* position: absolute; start from pos parent to move */
+  position: absolute;
+  top:50px;
+  left: 400px;
+  /* z-index: ;  */
+}
+.banner .content p:first-child {
+  font-size: 30px;
+  /* margin-top: 70px; */
+}
+.banner .content p:nth-child(2) {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.banner.content p:last-child {
+  line-height: 50px;
+}
+.contact{
+  background-color: #fd3823;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  position: fixed; /**/
+  bottom: 20px;
+  right: 20px;
+}
