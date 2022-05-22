@@ -805,7 +805,7 @@ header {
 }
 
 .testimonial-thumbs .testimonial-pic .shape-bx::after {
-  background-image: url(..../img/pattern12.png);
+  background-image: url(../img/pattern12.png);
 
   background-position: bottom;
   background-size: contain;
